@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,800;1,400&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin-top:80px;
+}
+
+#menu{
+    font-size : 20px;
+    position:fixed;
+    width:100%;
+    top:10px; 
+}
+
+#menu ul {
+    list-style:none;
+    padding:0;
+    margin:0;
+    height:30px;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+#menu ul li{
+       text-align:center;
+}
+
+#menu ul li:first-of-type{
+    font-size:30px;
+    font-style:italic;
+    line-height:20px;
+}
+    
+#menu ul li a {
+    text-decoration : none;
+    color : #000;
+}
+
+#menu ul li:hover {
+    border-bottom: 7px solid #000;
+}
+
+#menu ul li:hover a {
+    //text-decoration:underline;
+}
+
+
+#works{
+    display : grid;
+    grid-template-columns:repeat(3, 1fr);
+    column-gap: 10px;
+}
+
+#works a {
+    text-decoration:none;
+    color:#000;
+}
+.work{
+    position:relative;
+    overflow:hidden;
+}
+
+.wimg{
+    overflow:hidden ;
+    height:300px;
+    display:grid;
+}
+
+.wimg img{
+    width:150%;
+    margin-top:-20%;
+    display:block;
+    justify-self:center;
+    align-self:center;
+}
+
+.winfo{
+    position:absolute;
+    top:0;
+    left:0;
+    background:#fff;
+    width:100%;
+    height:100%;
+    text-align:center;
+    padding-top:25%;
+    opacity:0;
+    transition: all 0.3s ease;
+    transform-origin: center;
+    transform : scale(1.5);
+
+}
+
+.work:hover .winfo{
+    opacity:1;
+    transform : scale(1);
+    
+}
+
+h2.wtitle{
+    font-style:italic;
+    color : #000;
+    text-transform:uppercase;
+    padding:0;
+    margin:0;
+
+}
+.winfo .wdate{
+    color : #ff5522;
+    font-weight:lighter;
+}
+
+#gal {
+    width:100%;
+    display : grid ;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+}
+
+#gal .simg{
+    height:150px;
+    overflow : hidden;
+    display:grid;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+#gal .simg img{
+    width:200%;
+}
+
+.fullSize{
+    grid-column: span 3;
+    height:auto!important;
+}
+
+.fullSize img{
+    width:100vw !important;
+    height:auto !important;
+}
+

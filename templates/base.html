@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>my website</title>
+        <!-- Link stylesheets here -->
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}"> 
+    </head>
+    <body>
+
+    {% include 'menu.html' %}
+
+
+        <h1>articles list</h1>
+        
+        <div id="works">
+
+        {% for a in latest %}
+
+            <div class="work">
+                <a href="/{{a.path}}">
+                    <div class="wimg">
+                        <img src="/static/img/{{a.img}}" />
+                    </div>                
+                    <div class="winfo">
+                        <h2 class= "wtitle">{{a.title}}</h2>
+                        <span class="wdesc">{{a.desc}}</span>
+                        <span class="wdate">{{a.published}}  /   {{a.cat}}</span>
+                    </div>
+                </a>
+            </div>
+
+        {% endfor %}
+
+        </div>
+
+        
+
+        <!-- Link script files here -->
+        <script src="script.js"></script>
+    </body>
+</html>
